@@ -1,0 +1,18 @@
+defaults:
+ some_float: 1.0
+ some_file: text_file.txt
+ contact:
+  email: joe@email.com
+
+cli:
+ - cli_key: --email email
+   desc: an email address perhaps
+   keys: [contact, email]
+ - cli_key: --some-file file
+   desc: contents of some file
+   keys: [some_file]
+   type: file-contents
+ - cli_key: --some-float var
+   desc: a floating point number
+   keys: [some_float]
+   type: float
